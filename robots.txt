@@ -1,0 +1,45 @@
+# Allow social/link-preview crawlers explicitly
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: facebookcatalog
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+User-agent: redditbot
+Allow: /
+
+# Default: allow everything
+User-agent: *
+Allow: /
+
+Sitemap: https://arborr.ai/sitemap.xml
