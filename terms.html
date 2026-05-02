@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions · Arborr</title>
+<meta name="description" content="The terms that govern access to and use of the Arborr platform and marketing website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0e0d0b;
+    --bg-2: #15130f;
+    --surface: #1a1714;
+    --surface-alt: #201c18;
+    --surface-hi: #2a241e;
+    --border: #2b2620;
+    --border-hi: #3a332b;
+    --text: #f0ead9;
+    --text-dim: #b9b0a0;
+    --text-subtle: #7a7365;
+    --accent: #d9a155;
+    --accent-hi: #ecbb73;
+
+    --ff-display: "Newsreader", "New York", ui-serif, Georgia, serif;
+    --ff-sans: "Geist", -apple-system, BlinkMacSystemFont, "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
+    --ff-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--ff-sans);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  body {
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(217,161,85,0.06), transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, rgba(152,167,217,0.04), transparent 60%),
+      var(--bg);
+    min-height: 100vh;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: color .15s ease; }
+  a:hover { color: var(--accent-hi); }
+
+  /* ─────────── NAV ─────────── */
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(14,13,11,0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.top .wrap {
+    max-width: 1240px; margin: 0 auto;
+    padding: 14px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand img { height: 30px; display: block; }
+  .back {
+    font-size: 13px;
+    color: var(--text-dim);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .back:hover { color: var(--text); }
+  .back .arr { transition: transform .2s ease; }
+  .back:hover .arr { transform: translateX(-3px); }
+
+  /* ─────────── HEADER ─────────── */
+  header.page-head {
+    max-width: 880px; margin: 0 auto;
+    padding: 80px 28px 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  header.page-head h1 {
+    font-family: var(--ff-display);
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 22px;
+  }
+  header.page-head h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  header.page-head .lede {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 640px;
+    line-height: 1.55;
+  }
+  .meta {
+    margin-top: 28px;
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    color: var(--text-subtle);
+    display: flex; gap: 22px; flex-wrap: wrap;
+  }
+  .meta span strong { color: var(--text-dim); font-weight: 500; }
+
+  /* ─────────── CONTENT ─────────── */
+  main {
+    max-width: 880px; margin: 0 auto;
+    padding: 60px 28px 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 960px) {
+    main { grid-template-columns: 220px 1fr; gap: 64px; }
+  }
+
+  aside.toc {
+    position: sticky; top: 90px;
+    align-self: start;
+    font-family: var(--ff-mono);
+    font-size: 11.5px;
+    line-height: 1.9;
+    color: var(--text-subtle);
+    border-left: 1px solid var(--border);
+    padding-left: 16px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
+  aside.toc .toc-title {
+    font-family: var(--ff-sans);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+  }
+  aside.toc a {
+    display: block;
+    color: var(--text-subtle);
+    padding: 2px 0;
+  }
+  aside.toc a:hover { color: var(--text); }
+  @media (max-width: 959px) { aside.toc { display: none; } }
+
+  article { min-width: 0; }
+
+  article section { padding: 32px 0; border-bottom: 1px solid var(--border); }
+  article section:last-of-type { border-bottom: none; }
+  article section:first-of-type { padding-top: 0; }
+
+  article h2 {
+    font-family: var(--ff-display);
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    margin-bottom: 18px;
+    display: flex; align-items: baseline; gap: 14px;
+  }
+  article h2 .num {
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+  }
+  article h3 {
+    font-family: var(--ff-sans);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--text);
+    margin: 22px 0 8px;
+    letter-spacing: 0.01em;
+  }
+  article p {
+    font-size: 15px;
+    color: var(--text-dim);
+    margin-bottom: 14px;
+    line-height: 1.7;
+  }
+  article p:last-child { margin-bottom: 0; }
+
+  article ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 18px;
+  }
+  article ul li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 15px;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+    line-height: 1.65;
+  }
+  article ul li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 11px;
+    width: 8px; height: 1px;
+    background: var(--accent);
+  }
+  article ul li strong { color: var(--text); font-weight: 500; }
+
+  article code, article kbd {
+    font-family: var(--ff-mono);
+    font-size: 12.5px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .callout {
+    margin: 18px 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--accent);
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    border-radius: 2px;
+  }
+  .callout strong { color: var(--text); font-weight: 500; }
+
+  /* ─────────── FOOTER ─────────── */
+  footer {
+    border-top: 1px solid var(--border);
+    background: var(--bg-2);
+    margin-top: 40px;
+  }
+  footer .wrap {
+    max-width: 1240px; margin: 0 auto;
+    padding: 60px 28px 28px;
+  }
+  footer .top {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: 32px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  @media (max-width: 800px) {
+    footer .top { grid-template-columns: 1fr 1fr; }
+    footer .top .brand { grid-column: 1 / -1; }
+  }
+  footer .brand img { height: 26px; }
+  footer .col .h {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+    margin-bottom: 14px;
+  }
+  footer .col a {
+    display: block;
+    font-size: 13.5px;
+    color: var(--text-dim);
+    padding: 4px 0;
+  }
+  footer .col a:hover { color: var(--text); }
+  footer .bottom {
+    padding-top: 24px;
+    display: flex; justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-subtle);
+    flex-wrap: wrap; gap: 12px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Arborr — back to home"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMiAtNDYuNzk5OTk5OTk5OTk5OTggNjU1LjYwMDAwMDAwMDAwMDEgMTc5LjI5OTk5OTk5OTk5OTk4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9ImFyYm9yciI+CiAgPGNpcmNsZSBjeD0iNTUiIGN5PSI1NSIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L2NpcmNsZT4KPHBhdGggZD0iTSAxMDUgNSBMIDEwNSAxMDUgcSAwIDYgMTIgMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRlZWRkIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KICA8cGF0aCBkPSJNIDEyMy44IDEwNSBMIDEyMy44IDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CjxwYXRoIGQ9Ik0gMTIzLjggNDEuOCBDIDEyMy44IDUsIDE2OC4zIDUsIDIwMS4zIDI0LjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgPHBhdGggZD0iTSAyMTEuOCAtMzYuNzk5OTk5OTk5OTk5OTggTCAyMTEuOCAxMDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CjxjaXJjbGUgY3g9IjI2MS44IiBjeT0iNTUiIHI9IjUwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNGVlZGQiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9jaXJjbGU+CiAgPHBhdGggZD0iTSAzMzAuNjAgNTUuMDAgTCAzMzAuOTMgNTguNTUgTCAzMzEuNTEgNjIuMDYgTCAzMzIuMzQgNjUuNTAgTCAzMzMuNDAgNjguODYgTCAzMzQuNzAgNzIuMTIgTCAzMzYuMjIgNzUuMjcgTCAzMzcuOTYgNzguMjggTCAzMzkuOTAgODEuMTYgTCAzNDIuMDMgODMuODcgTCAzNDQuMzQgODYuNDIgTCAzNDYuODIgODguNzggTCAzNDkuNDUgOTAuOTUgTCAzNTIuMjEgOTIuOTIgTCAzNTUuMTAgOTQuNjggTCAzNTguMDkgOTYuMjIgTCAzNjEuMTcgOTcuNTQgTCAzNjQuMzMgOTguNjMgTCAzNjcuNTQgOTkuNDggTCAzNzAuNzkgMTAwLjEwIEwgMzc0LjA2IDEwMC40OSBMIDM3Ny4zNCAxMDAuNjQgTCAzODAuNjAgMTAwLjU1IEwgMzgzLjg0IDEwMC4yMyBMIDM4Ny4wMiA5OS42OSBMIDM5MC4xNSA5OC45MiBMIDM5My4yMCA5Ny45MyBMIDM5Ni4xNiA5Ni43MyBMIDM5OS4wMiA5NS4zMyBMIDQwMS43NSA5My43NCBMIDQwNC4zNSA5MS45NiBMIDQwNi44MSA5MC4wMSBMIDQwOS4xMCA4Ny45MCBMIDQxMS4yNCA4NS42NCBMIDQxMy4xOSA4My4yNCBMIDQxNC45NiA4MC43MiBMIDQxNi41NCA3OC4xMCBMIDQxNy45MiA3NS4zOCBMIDQxOS4wOSA3Mi41OCBMIDQyMC4wNiA2OS43MiBMIDQyMC44MSA2Ni44MSBMIDQyMS4zNSA2My44NyBMIDQyMS42OCA2MC45MSBMIDQyMS44MCA1Ny45NSBMIDQyMS43MCA1NS4wMCBMIDQyMS4zOSA1Mi4wOCBMIDQyMC44OCA0OS4yMSBMIDQyMC4xNyA0Ni4zOSBMIDQxOS4yNiA0My42NSBMIDQxOC4xNiA0MC45OSBMIDQxNi44OCAzOC40MyBMIDQxNS40MyAzNS45OCBMIDQxMy44MSAzMy42NSBMIDQxMi4wNCAzMS40NiBMIDQxMC4xMyAyOS40MSBMIDQwOC4wOSAyNy41MSBMIDQwNS45MyAyNS43NyBMIDQwMy42NSAyNC4yMCBMIDQwMS4yOSAyMi44MSBMIDM5OC44NCAyMS41OSBMIDM5Ni4zMyAyMC41NiBMIDM5My43NiAxOS43MSBMIDM5MS4xNSAxOS4wNiBMIDM4OC41MiAxOC41OSBMIDM4NS44NyAxOC4zMiBMIDM4My4yMyAxOC4yNCBMIDM4MC42MCAxOC4zNSBMIDM3OC4wMCAxOC42NSBMIDM3NS40NCAxOS4xMiBMIDM3Mi45NCAxOS43OCBMIDM3MC41MCAyMC42MSBMIDM2OC4xNSAyMS42MSBMIDM2NS44OCAyMi43NyBMIDM2My43MSAyNC4wOCBMIDM2MS42NiAyNS41MyBMIDM1OS43MyAyNy4xMiBMIDM1Ny45MiAyOC44MyBMIDM1Ni4yNiAzMC42NiBMIDM1NC43NCAzMi41OSBMIDM1My4zNyAzNC42MSBMIDM1Mi4xNSAzNi43MiBMIDM1MS4xMCAzOC44OSBMIDM1MC4yMSA0MS4xMiBMIDM0OS40OCA0My4zOSBMIDM0OC45MyA0NS43MCBMIDM0OC41NCA0OC4wMyBMIDM0OC4zMyA1MC4zNiBMIDM0OC4yOCA1Mi42OSBMIDM0OC40MCA1NS4wMCBMIDM0OC42OCA1Ny4yOCBMIDM0OS4xMyA1OS41MiBMIDM0OS43MyA2MS43MiBMIDM1MC40OCA2My44NCBMIDM1MS4zOCA2NS45MCBMIDM1Mi40MSA2Ny44NyBMIDM1My41OCA2OS43NSBMIDM1NC44NyA3MS41MyBMIDM1Ni4yOCA3My4yMSBMIDM1Ny43OSA3NC43NiBMIDM1OS40MCA3Ni4yMCBMIDM2MS4xMCA3Ny41MCBMIDM2Mi44OCA3OC42NyBMIDM2NC43MiA3OS43MSBMIDM2Ni42MiA4MC42MCBMIDM2OC41NyA4MS4zNSBMIDM3MC41NSA4MS45NSBMIDM3Mi41NSA4Mi40MCBMIDM3NC41NyA4Mi43MSBMIDM3Ni41OSA4Mi44NyBMIDM3OC42MSA4Mi44OCBMIDM4MC42MCA4Mi43NSBMIDM4Mi41NyA4Mi40OCBMIDM4NC40OSA4Mi4wNyBMIDM4Ni4zNyA4MS41MiBMIDM4OC4xOSA4MC44NSBMIDM4OS45NCA4MC4wNSBMIDM5MS42MiA3OS4xNCBMIDM5My4yMiA3OC4xMSBMIDM5NC43MyA3Ni45OCBMIDM5Ni4xNCA3NS43NiBMIDM5Ny40NSA3NC40NCBMIDM5OC42NSA3My4wNSBMIDM5OS43NCA3MS41OCBMIDQwMC43MSA3MC4wNSBMIDQwMS41NiA2OC40NyBMIDQwMi4yOSA2Ni44NSBMIDQwMi45MCA2NS4xOCBMIDQwMy4zOCA2My41MCBMIDQwMy43MyA2MS43OSBMIDQwMy45NiA2MC4wOCBMIDQwNC4wNiA1OC4zNyBMIDQwNC4wNCA1Ni42OCBMIDQwMy45MCA1NS4wMCBMIDQwMy42NCA1My4zNSBMIDQwMy4yNiA1MS43NCBMIDQwMi43NyA1MC4xOCBMIDQwMi4xOCA0OC42NiBMIDQwMS40OCA0Ny4yMSBMIDQwMC42OSA0NS44MiBMIDM5OS44MSA0NC41MSBMIDM5OC44NCA0My4yOCBMIDM5Ny44MCA0Mi4xMyBMIDM5Ni42OCA0MS4wNyBMIDM5NS41MCA0MC4xMCBMIDM5NC4yNyAzOS4yMyBMIDM5Mi45OSAzOC40NSBMIDM5MS42NyAzNy43OCBMIDM5MC4zMSAzNy4yMSBMIDM4OC45MyAzNi43NSBMIDM4Ny41NCAzNi4zOSBMIDM4Ni4xNCAzNi4xNCBMIDM4NC43NCAzNS45OSBMIDM4My4zNCAzNS45NCBMIDM4MS45NiAzNi4wMCBMIDM4MC42MCAzNi4xNSBMIDM3OS4yNyAzNi40MCBMIDM3Ny45NyAzNi43NCBMIDM3Ni43MiAzNy4xNyBMIDM3NS41MiAzNy42OSBMIDM3NC4zNyAzOC4yOSBMIDM3My4yNyAzOC45NiBMIDM3Mi4yNCAzOS43MCBMIDM3MS4yOCA0MC41MCBMIDM3MC4zOSA0MS4zNyBMIDM2OS41OCA0Mi4yOCBMIDM2OC44NCA0My4yNCBMIDM2OC4xOSA0NC4yNSBMIDM2Ny42MSA0NS4yOCBMIDM2Ny4xMiA0Ni4zNCBMIDM2Ni43MiA0Ny40MiBMIDM2Ni40MCA0OC41MSBMIDM2Ni4xNiA0OS42MSBMIDM2Ni4wMSA1MC43MiBMIDM2NS45NCA1MS44MSBMIDM2NS45NSA1Mi44OSBMIDM2Ni4wMyA1My45NiBMIDM2Ni4yMCA1NS4wMCBMIDM2Ni40NCA1Ni4wMSBMIDM2Ni43NSA1Ni45OSBMIDM2Ny4xMiA1Ny45MyBMIDM2Ny41NiA1OC44MyBMIDM2OC4wNiA1OS42OCBMIDM2OC42MSA2MC40OCBMIDM2OS4yMCA2MS4yMiBMIDM2OS44NSA2MS45MSBMIDM3MC41MyA2Mi41NCBMIDM3MS4yNSA2My4xMSBMIDM3MS45OSA2My42MSBMIDM3Mi43NiA2NC4wNSBMIDM3My41NSA2NC40MiBMIDM3NC4zNSA2NC43MyBMIDM3NS4xNSA2NC45OCBMIDM3NS45NiA2NS4xNSBMIDM3Ni43NyA2NS4yNyBMIDM3Ny41NyA2NS4zMiBMIDM3OC4zNiA2NS4zMiBMIDM3OS4xMyA2NS4yNSBMIDM3OS44OCA2NS4xMyBMIDM4MC42MCA2NC45NSBMIDM4MS4zMCA2NC43MiBMIDM4MS45NiA2NC40NSBMIDM4Mi41OSA2NC4xMyBMIDM4My4xOCA2My43NyBMIDM4My43MiA2My4zOCBMIDM4NC4yMyA2Mi45NSBMIDM4NC42OSA2Mi40OSBMIDM4NS4xMCA2Mi4wMSBMIDM4NS40NyA2MS41MSBMIDM4NS43OSA2MC45OSBMIDM4Ni4wNiA2MC40NiBMIDM4Ni4yOSA1OS45MyBMIDM4Ni40NiA1OS4zOSBMIDM4Ni41OSA1OC44NSBMIDM4Ni42NyA1OC4zMSBMIDM4Ni43MSA1Ny43OSBMIDM4Ni43MCA1Ny4yOCBMIDM4Ni42NSA1Ni43OCBMIDM4Ni41NyA1Ni4zMCBMIDM4Ni40NCA1NS44NCBMIDM4Ni4yOSA1NS40MSBMIDM4Ni4xMCA1NS4wMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDlhMTU1IiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KICA8cGF0aCBkPSJNIDQ0OS40MDAwMDAwMDAwMDAwMyAxMDUgTCA0NDkuNDAwMDAwMDAwMDAwMDMgNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRlZWRkIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KPHBhdGggZD0iTSA0NDkuNDAwMDAwMDAwMDAwMDMgNDEuOCBDIDQ0OS40MDAwMDAwMDAwMDAwMyA1LCA0OTMuOTAwMDAwMDAwMDAwMDMgNSwgNTI2LjkwMDAwMDAwMDAwMDEgMjQuMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRlZWRkIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KICA8cGF0aCBkPSJNIDUzNy40MDAwMDAwMDAwMDAxIDEwNSBMIDUzNy40MDAwMDAwMDAwMDAxIDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CjxwYXRoIGQ9Ik0gNTM3LjQwMDAwMDAwMDAwMDEgNDEuOCBDIDUzNy40MDAwMDAwMDAwMDAxIDUsIDU4MS45MDAwMDAwMDAwMDAxIDUsIDYxNC45MDAwMDAwMDAwMDAxIDI0LjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+Cjwvc3ZnPg==" alt="Arborr"></a>
+    <a href="index.html" class="back"><span class="arr">←</span> Back to home</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="eyebrow">Legal · Document 02</div>
+  <h1>Terms & <em>conditions</em></h1>
+  <p class="lede">The agreement between you, your organisation, and Arborr — covering access to the platform during private beta and beyond. Plain language where we can; precise where we have to be.</p>
+  <div class="meta">
+    <span><strong>Effective:</strong> 29 April 2026</span>
+    <span><strong>Last updated:</strong> 29 April 2026</span>
+    <span><strong>Version:</strong> 1.0</span>
+  </div>
+</header>
+
+<main>
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <a href="#agreement">01 · Agreement</a>
+    <a href="#service">02 · The service</a>
+    <a href="#beta">03 · Private beta</a>
+    <a href="#eligibility">04 · Eligibility & account</a>
+    <a href="#customer-data">05 · Customer data</a>
+    <a href="#acceptable-use">06 · Acceptable use</a>
+    <a href="#ip">07 · Intellectual property</a>
+    <a href="#ai">08 · AI features</a>
+    <a href="#confidentiality">09 · Confidentiality</a>
+    <a href="#fees">10 · Fees</a>
+    <a href="#term">11 · Term & termination</a>
+    <a href="#disclaimers">12 · Disclaimers</a>
+    <a href="#liability">13 · Liability</a>
+    <a href="#indemnification">14 · Indemnification</a>
+    <a href="#governing-law">15 · Governing law</a>
+    <a href="#changes">16 · Changes</a>
+    <a href="#contact">17 · Contact</a>
+  </aside>
+
+  <article>
+    <section id="agreement">
+      <h2><span class="num">01</span> Agreement to terms</h2>
+      <p>These Terms & Conditions ("<strong>Terms</strong>") form a binding agreement between Arborr ("<strong>Arborr</strong>", "<strong>we</strong>", "<strong>us</strong>") and the organisation accessing the Arborr platform or website ("<strong>Customer</strong>", "<strong>you</strong>"). By submitting an access request, signing an order form, or using any part of the service, you confirm that you have authority to bind your organisation and you agree to these Terms.</p>
+      <p>If you don't agree, don't use the service. Where a separate signed agreement exists between us — for example a Master Subscription Agreement, Data Processing Agreement, or order form — that agreement controls to the extent of any conflict with these Terms.</p>
+    </section>
+
+    <section id="service">
+      <h2><span class="num">02</span> The service</h2>
+      <p>Arborr is an AI-assisted reporting platform. It connects to data sources you authorise — SQL databases or uploaded CSV files — and helps you turn natural-language questions into reports, snapshots, and shareable links. The service includes:</p>
+      <ul>
+        <li><strong>The platform</strong> — authoring, semantic layer, query planning, rendering, sharing, and PDF export.</li>
+        <li><strong>The marketing website</strong> at <code>arborr.ai</code>, including the "Request access" form.</li>
+        <li><strong>Documentation, support, and product updates</strong> we make available from time to time.</li>
+      </ul>
+      <p>We may add, change, or remove features. We won't materially reduce the core functionality you've paid for during a paid term without giving you advance notice and a reasonable remedy if you object.</p>
+    </section>
+
+    <section id="beta">
+      <h2><span class="num">03</span> Private beta program</h2>
+      <p>Until we announce general availability, the platform is offered as a <strong>private beta</strong>. By participating, you acknowledge:</p>
+      <ul>
+        <li>The service is pre-release. Bugs, downtime, and breaking changes are expected.</li>
+        <li>There is <strong>no service-level agreement (SLA)</strong> during the beta and no commitment to uptime, performance, or response times unless we agree otherwise in writing.</li>
+        <li>We may modify, suspend, or discontinue the beta — in whole or for any individual customer — at any time, with reasonable notice where practicable.</li>
+        <li>Beta features may be unstable and are provided "as is". Don't rely on them for production decisions until we tell you they're stable.</li>
+        <li>You agree to provide reasonable feedback when asked. Feedback you give us is non-confidential and we may use it to improve the service without owing you anything in return.</li>
+      </ul>
+      <div class="callout"><strong>Heads up:</strong> private-beta access is by invitation. Submitting the request form does not by itself create an obligation on our part to grant access.</div>
+    </section>
+
+    <section id="eligibility">
+      <h2><span class="num">04</span> Eligibility & account</h2>
+      <p>The service is intended for businesses. To use it, you must:</p>
+      <ul>
+        <li>Be at least 18 years old and legally able to enter contracts on behalf of your organisation.</li>
+        <li>Provide accurate, current, and complete information when requesting access or creating accounts.</li>
+        <li>Keep credentials confidential. You're responsible for everything that happens under your account, except where it's caused by us.</li>
+        <li>Notify us promptly at <a href="mailto:security@arborr.ai">security@arborr.ai</a> if you suspect a credential has been compromised.</li>
+      </ul>
+      <p>You may not let people outside your organisation use your account, except for individual contractors acting on your behalf and bound by terms at least as protective as these.</p>
+    </section>
+
+    <section id="customer-data">
+      <h2><span class="num">05</span> Customer data</h2>
+      <p><strong>You own your data.</strong> Anything you connect, upload, query, or generate using the service — database contents, CSV files, prompts, generated SQL, snapshots, share links, reports — is your "Customer Data". As between us, you retain all rights, title, and interest in Customer Data.</p>
+      <p>You grant Arborr a limited, worldwide, non-exclusive, royalty-free licence to host, process, transmit, and display Customer Data solely as needed to provide and improve the service for you. We do not use Customer Data to train large language models. We do not sell Customer Data.</p>
+      <p>You are responsible for:</p>
+      <ul>
+        <li>Having the legal right to connect each data source and upload each file.</li>
+        <li>Choosing what data to expose to the service. Our security practices are described separately, but the simplest control is not connecting data you don't need.</li>
+        <li>The accuracy, lawfulness, and quality of Customer Data, and obtaining any consents required from data subjects.</li>
+        <li>Configuring access controls and PII-masking options appropriately for your use case.</li>
+      </ul>
+      <p>Where we process personal data on your behalf, that processing is governed by our Data Processing Agreement, which forms part of these Terms when applicable.</p>
+    </section>
+
+    <section id="acceptable-use">
+      <h2><span class="num">06</span> Acceptable use</h2>
+      <p>You agree not to (and not to let anyone else):</p>
+      <ul>
+        <li>Use the service to violate any law, regulation, or third-party right.</li>
+        <li>Upload data you don't have the right to upload, or data containing malware.</li>
+        <li>Reverse engineer, decompile, or attempt to derive the source code or models behind the service, except where the law specifically permits it.</li>
+        <li>Resell, sublicense, or provide the service as a hosted offering to third parties without our written consent.</li>
+        <li>Probe, scan, or test the vulnerability of any system or network without our prior written authorisation, or interfere with the service's operation.</li>
+        <li>Use the service to build a competing product, or to extract data, prompts, or model behaviour for that purpose.</li>
+        <li>Connect data sources containing the credentials, secrets, or sensitive personal data of third parties unless those subjects have been informed and you have a lawful basis to do so.</li>
+        <li>Submit prompts or content that are clearly designed to make the AI produce illegal, harmful, defamatory, or infringing output.</li>
+      </ul>
+      <p>We may suspend or terminate access if we reasonably believe you've breached this section, with notice unless the breach is severe or ongoing.</p>
+    </section>
+
+    <section id="ip">
+      <h2><span class="num">07</span> Intellectual property</h2>
+      <p>The service — including software, models, designs, documentation, and all related IP rights — is owned by Arborr and its licensors. We grant you a limited, non-exclusive, non-transferable right to use the service for your internal business purposes during the term, subject to these Terms.</p>
+      <p>"Arborr", the Arborr logo, and product names are our trademarks. You may not use them without our prior written permission, except to factually identify Arborr as the provider of the service.</p>
+      <p>All rights not expressly granted are reserved.</p>
+    </section>
+
+    <section id="ai">
+      <h2><span class="num">08</span> AI features</h2>
+      <p>The service uses third-party large language models (currently Anthropic's Claude family) to plan queries and generate report layouts. By using AI features you accept the following:</p>
+      <ul>
+        <li><strong>Outputs may be wrong.</strong> Generated SQL, summaries, and explanations can be inaccurate, incomplete, or misleading. Treat them as drafts. Verify before relying on them — especially for clinical, financial, legal, or regulated decisions.</li>
+        <li><strong>Determinism is not guaranteed.</strong> The same prompt can produce different outputs across runs and model versions.</li>
+        <li><strong>Sub-processor.</strong> The LLM provider acts as our sub-processor and is bound by terms that prohibit using your inputs to train their models. We pass relevant prompt and schema context to the provider; we don't pass raw row-level data unless it's part of a sample we've explicitly surfaced for context.</li>
+        <li><strong>You remain responsible</strong> for what you do with AI outputs and for the prompts you submit.</li>
+      </ul>
+    </section>
+
+    <section id="confidentiality">
+      <h2><span class="num">09</span> Confidentiality</h2>
+      <p>Each party may disclose information to the other that is non-public and identified or reasonably understood to be confidential ("<strong>Confidential Information</strong>"). The recipient agrees to:</p>
+      <ul>
+        <li>Use the information only to perform under or evaluate these Terms.</li>
+        <li>Protect it with at least the same care it uses for its own confidential information of similar sensitivity, and no less than reasonable care.</li>
+        <li>Limit access to employees, contractors, and advisors with a need to know who are bound by confidentiality obligations.</li>
+      </ul>
+      <p>This section does not cover information that is already public, independently developed, lawfully received from a third party without restriction, or required to be disclosed by law (in which case the recipient gives prompt notice where allowed).</p>
+      <p><strong>Beta confidentiality:</strong> features, performance, pricing, and feedback exchanged during the private beta are Arborr Confidential Information. Please don't publish screenshots, benchmarks, or written reviews of pre-GA functionality without our written consent.</p>
+    </section>
+
+    <section id="fees">
+      <h2><span class="num">10</span> Fees</h2>
+      <p>The service is paid during the private beta. Beta participants pay the <strong>introductory rates</strong> shown on the <a href="index.html#pricing">pricing page</a> — currently Starter at $49/month, Professional at $149/month, and Scale at $399/month — billed monthly in advance per user seat or per the terms of your order form. Annual billing, custom plans, and enterprise pricing are available on request.</p>
+      <p><strong>Pricing at general availability.</strong> The rates above are introductory and will increase when the platform reaches general availability. Customers active on a paid plan at the time of the change will receive at least <strong>30 days' written notice</strong> before the new rates take effect on their next renewal. We will not raise the price of an in-progress prepaid term — increases apply at the next renewal only. If you don't accept the new pricing, you may cancel before it takes effect; any unused prepaid fees will be refunded on a pro-rata basis.</p>
+      <p>Fees are exclusive of taxes, duties, and similar charges, which you're responsible for unless we're legally required to collect them. Unpaid amounts more than 30 days past due may accrue interest at the lower of 1% per month or the maximum allowed by law, and we may suspend the service until balances are settled.</p>
+      <p>Except where required by law or expressly agreed otherwise, fees paid are non-refundable.</p>
+    </section>
+
+    <section id="term">
+      <h2><span class="num">11</span> Term & termination</h2>
+      <p>These Terms apply from the moment you first access the service and continue until terminated. Either party may terminate:</p>
+      <ul>
+        <li><strong>For convenience</strong> during the private beta or any month-to-month subscription, with 30 days' written notice.</li>
+        <li><strong>For cause</strong> if the other party materially breaches these Terms and fails to cure within 30 days of written notice (or immediately for breaches that cannot be cured).</li>
+        <li><strong>Immediately</strong> by us if you breach the acceptable-use section, become insolvent, or remain in non-payment after a reasonable cure period.</li>
+      </ul>
+      <p>On termination: your access ends, we delete or return Customer Data within 30 days (subject to legal retention obligations), and any clauses that by their nature should survive — IP, confidentiality, fees accrued, liability, governing law — survive.</p>
+    </section>
+
+    <section id="disclaimers">
+      <h2><span class="num">12</span> Disclaimers</h2>
+      <p>Except as expressly stated in writing, the service is provided <strong>"as is" and "as available"</strong>. To the maximum extent permitted by law, Arborr disclaims all warranties — express, implied, or statutory — including merchantability, fitness for a particular purpose, non-infringement, accuracy, and quiet enjoyment.</p>
+      <p>We do not warrant that the service will be uninterrupted, error-free, secure against every threat, or that AI outputs will be accurate. You use the service at your own risk and you remain responsible for the decisions you make based on it.</p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="num">13</span> Limitation of liability</h2>
+      <p>To the maximum extent permitted by law:</p>
+      <ul>
+        <li>Neither party will be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, including lost profits, lost data, business interruption, or loss of goodwill, even if advised of the possibility.</li>
+        <li>Each party's total aggregate liability arising from or relating to these Terms will not exceed the greater of (a) the fees you paid to us in the 12 months preceding the event giving rise to the claim, or (b) one hundred US dollars (USD 100).</li>
+      </ul>
+      <p>The above limits do not apply to: (i) breach of confidentiality, (ii) infringement of a party's intellectual property, (iii) indemnification obligations, (iv) gross negligence or wilful misconduct, or (v) liability that cannot be excluded or limited under applicable law.</p>
+    </section>
+
+    <section id="indemnification">
+      <h2><span class="num">14</span> Indemnification</h2>
+      <p><strong>By you.</strong> You will defend, indemnify, and hold harmless Arborr and its affiliates against third-party claims and resulting losses arising from (a) your Customer Data, (b) your breach of these Terms, or (c) your unlawful use of the service.</p>
+      <p><strong>By us.</strong> We will defend you against third-party claims that the service, used in accordance with these Terms, infringes a third party's intellectual property rights, and pay damages finally awarded or agreed in settlement. If we believe the service may infringe, we may modify it, procure a licence, or terminate access and refund unused prepaid fees.</p>
+      <p>The indemnified party must promptly notify the indemnifying party, give it sole control of defence and settlement (without admitting fault on the indemnified party's behalf), and reasonably cooperate.</p>
+    </section>
+
+    <section id="governing-law">
+      <h2><span class="num">15</span> Governing law & disputes</h2>
+      <p>These Terms are governed by the laws of the <strong>United Arab Emirates</strong> as applied in the Emirate of Dubai, without regard to its conflict-of-laws rules. The parties submit to the exclusive jurisdiction of the courts of the Dubai International Financial Centre (DIFC) for any dispute arising out of or in connection with these Terms.</p>
+      <p>Before filing a claim, the parties will try in good faith to resolve the dispute by negotiation between authorised representatives for at least 30 days after written notice from one party to the other.</p>
+      <p>Where local consumer-protection or other mandatory laws apply to you, this section does not override them.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">16</span> Changes to these Terms</h2>
+      <p>We may update these Terms from time to time. The "Last updated" date at the top of this page reflects the most recent change. For material changes we'll provide reasonable advance notice — typically by email or an in-product notice — and the change will take effect on the date stated. Continued use after the effective date means you accept the updated Terms.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">17</span> Contact</h2>
+      <p>Questions about these Terms or about a specific clause:</p>
+      <ul>
+        <li><strong>Legal</strong> — <a href="mailto:legal@arborr.ai">legal@arborr.ai</a></li>
+        <li><strong>Security</strong> — <a href="mailto:security@arborr.ai">security@arborr.ai</a></li>
+        <li><strong>General</strong> — <a href="mailto:hello@arborr.ai">hello@arborr.ai</a></li>
+      </ul>
+      <p>See also our <a href="privacy.html">Privacy policy</a>.</p>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMiAtNDYuNzk5OTk5OTk5OTk5OTggNjU1LjYwMDAwMDAwMDAwMDEgMTc5LjI5OTk5OTk5OTk5OTk4IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9ImFyYm9yciI+CiAgPGNpcmNsZSBjeD0iNTUiIGN5PSI1NSIgcj0iNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L2NpcmNsZT4KPHBhdGggZD0iTSAxMDUgNSBMIDEwNSAxMDUgcSAwIDYgMTIgMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRlZWRkIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KICA8cGF0aCBkPSJNIDEyMy44IDEwNSBMIDEyMy44IDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CjxwYXRoIGQ9Ik0gMTIzLjggNDEuOCBDIDEyMy44IDUsIDE2OC4zIDUsIDIwMS4zIDI0LjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgPHBhdGggZD0iTSAyMTEuOCAtMzYuNzk5OTk5OTk5OTk5OTggTCAyMTEuOCAxMDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CjxjaXJjbGUgY3g9IjI2MS44IiBjeT0iNTUiIHI9IjUwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNGVlZGQiIHN0cm9rZS13aWR0aD0iMTAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PC9jaXJjbGU+CiAgPHBhdGggZD0iTSAzMzAuNjAgNTUuMDAgTCAzMzAuOTMgNTguNTUgTCAzMzEuNTEgNjIuMDYgTCAzMzIuMzQgNjUuNTAgTCAzMzMuNDAgNjguODYgTCAzMzQuNzAgNzIuMTIgTCAzMzYuMjIgNzUuMjcgTCAzMzcuOTYgNzguMjggTCAzMzkuOTAgODEuMTYgTCAzNDIuMDMgODMuODcgTCAzNDQuMzQgODYuNDIgTCAzNDYuODIgODguNzggTCAzNDkuNDUgOTAuOTUgTCAzNTIuMjEgOTIuOTIgTCAzNTUuMTAgOTQuNjggTCAzNTguMDkgOTYuMjIgTCAzNjEuMTcgOTcuNTQgTCAzNjQuMzMgOTguNjMgTCAzNjcuNTQgOTkuNDggTCAzNzAuNzkgMTAwLjEwIEwgMzc0LjA2IDEwMC40OSBMIDM3Ny4zNCAxMDAuNjQgTCAzODAuNjAgMTAwLjU1IEwgMzgzLjg0IDEwMC4yMyBMIDM4Ny4wMiA5OS42OSBMIDM5MC4xNSA5OC45MiBMIDM5My4yMCA5Ny45MyBMIDM5Ni4xNiA5Ni43MyBMIDM5OS4wMiA5NS4zMyBMIDQwMS43NSA5My43NCBMIDQwNC4zNSA5MS45NiBMIDQwNi44MSA5MC4wMSBMIDQwOS4xMCA4Ny45MCBMIDQxMS4yNCA4NS42NCBMIDQxMy4xOSA4My4yNCBMIDQxNC45NiA4MC43MiBMIDQxNi41NCA3OC4xMCBMIDQxNy45MiA3NS4zOCBMIDQxOS4wOSA3Mi41OCBMIDQyMC4wNiA2OS43MiBMIDQyMC44MSA2Ni44MSBMIDQyMS4zNSA2My44NyBMIDQyMS42OCA2MC45MSBMIDQyMS44MCA1Ny45NSBMIDQyMS43MCA1NS4wMCBMIDQyMS4zOSA1Mi4wOCBMIDQyMC44OCA0OS4yMSBMIDQyMC4xNyA0Ni4zOSBMIDQxOS4yNiA0My42NSBMIDQxOC4xNiA0MC45OSBMIDQxNi44OCAzOC40MyBMIDQxNS40MyAzNS45OCBMIDQxMy44MSAzMy42NSBMIDQxMi4wNCAzMS40NiBMIDQxMC4xMyAyOS40MSBMIDQwOC4wOSAyNy41MSBMIDQwNS45MyAyNS43NyBMIDQwMy42NSAyNC4yMCBMIDQwMS4yOSAyMi44MSBMIDM5OC44NCAyMS41OSBMIDM5Ni4zMyAyMC41NiBMIDM5My43NiAxOS43MSBMIDM5MS4xNSAxOS4wNiBMIDM4OC41MiAxOC41OSBMIDM4NS44NyAxOC4zMiBMIDM4My4yMyAxOC4yNCBMIDM4MC42MCAxOC4zNSBMIDM3OC4wMCAxOC42NSBMIDM3NS40NCAxOS4xMiBMIDM3Mi45NCAxOS43OCBMIDM3MC41MCAyMC42MSBMIDM2OC4xNSAyMS42MSBMIDM2NS44OCAyMi43NyBMIDM2My43MSAyNC4wOCBMIDM2MS42NiAyNS41MyBMIDM1OS43MyAyNy4xMiBMIDM1Ny45MiAyOC44MyBMIDM1Ni4yNiAzMC42NiBMIDM1NC43NCAzMi41OSBMIDM1My4zNyAzNC42MSBMIDM1Mi4xNSAzNi43MiBMIDM1MS4xMCAzOC44OSBMIDM1MC4yMSA0MS4xMiBMIDM0OS40OCA0My4zOSBMIDM0OC45MyA0NS43MCBMIDM0OC41NCA0OC4wMyBMIDM0OC4zMyA1MC4zNiBMIDM0OC4yOCA1Mi42OSBMIDM0OC40MCA1NS4wMCBMIDM0OC42OCA1Ny4yOCBMIDM0OS4xMyA1OS41MiBMIDM0OS43MyA2MS43MiBMIDM1MC40OCA2My44NCBMIDM1MS4zOCA2NS45MCBMIDM1Mi40MSA2Ny44NyBMIDM1My41OCA2OS43NSBMIDM1NC44NyA3MS41MyBMIDM1Ni4yOCA3My4yMSBMIDM1Ny43OSA3NC43NiBMIDM1OS40MCA3Ni4yMCBMIDM2MS4xMCA3Ny41MCBMIDM2Mi44OCA3OC42NyBMIDM2NC43MiA3OS43MSBMIDM2Ni42MiA4MC42MCBMIDM2OC41NyA4MS4zNSBMIDM3MC41NSA4MS45NSBMIDM3Mi41NSA4Mi40MCBMIDM3NC41NyA4Mi43MSBMIDM3Ni41OSA4Mi44NyBMIDM3OC42MSA4Mi44OCBMIDM4MC42MCA4Mi43NSBMIDM4Mi41NyA4Mi40OCBMIDM4NC40OSA4Mi4wNyBMIDM4Ni4zNyA4MS41MiBMIDM4OC4xOSA4MC44NSBMIDM4OS45NCA4MC4wNSBMIDM5MS42MiA3OS4xNCBMIDM5My4yMiA3OC4xMSBMIDM5NC43MyA3Ni45OCBMIDM5Ni4xNCA3NS43NiBMIDM5Ny40NSA3NC40NCBMIDM5OC42NSA3My4wNSBMIDM5OS43NCA3MS41OCBMIDQwMC43MSA3MC4wNSBMIDQwMS41NiA2OC40NyBMIDQwMi4yOSA2Ni44NSBMIDQwMi45MCA2NS4xOCBMIDQwMy4zOCA2My41MCBMIDQwMy43MyA2MS43OSBMIDQwMy45NiA2MC4wOCBMIDQwNC4wNiA1OC4zNyBMIDQwNC4wNCA1Ni42OCBMIDQwMy45MCA1NS4wMCBMIDQwMy42NCA1My4zNSBMIDQwMy4yNiA1MS43NCBMIDQwMi43NyA1MC4xOCBMIDQwMi4xOCA0OC42NiBMIDQwMS40OCA0Ny4yMSBMIDQwMC42OSA0NS44MiBMIDM5OS44MSA0NC41MSBMIDM5OC44NCA0My4yOCBMIDM5Ny44MCA0Mi4xMyBMIDM5Ni42OCA0MS4wNyBMIDM5NS41MCA0MC4xMCBMIDM5NC4yNyAzOS4yMyBMIDM5Mi45OSAzOC40NSBMIDM5MS42NyAzNy43OCBMIDM5MC4zMSAzNy4yMSBMIDM4OC45MyAzNi43NSBMIDM4Ny41NCAzNi4zOSBMIDM4Ni4xNCAzNi4xNCBMIDM4NC43NCAzNS45OSBMIDM4My4zNCAzNS45NCBMIDM4MS45NiAzNi4wMCBMIDM4MC42MCAzNi4xNSBMIDM3OS4yNyAzNi40MCBMIDM3Ny45NyAzNi43NCBMIDM3Ni43MiAzNy4xNyBMIDM3NS41MiAzNy42OSBMIDM3NC4zNyAzOC4yOSBMIDM3My4yNyAzOC45NiBMIDM3Mi4yNCAzOS43MCBMIDM3MS4yOCA0MC41MCBMIDM3MC4zOSA0MS4zNyBMIDM2OS41OCA0Mi4yOCBMIDM2OC44NCA0My4yNCBMIDM2OC4xOSA0NC4yNSBMIDM2Ny42MSA0NS4yOCBMIDM2Ny4xMiA0Ni4zNCBMIDM2Ni43MiA0Ny40MiBMIDM2Ni40MCA0OC41MSBMIDM2Ni4xNiA0OS42MSBMIDM2Ni4wMSA1MC43MiBMIDM2NS45NCA1MS44MSBMIDM2NS45NSA1Mi44OSBMIDM2Ni4wMyA1My45NiBMIDM2Ni4yMCA1NS4wMCBMIDM2Ni40NCA1Ni4wMSBMIDM2Ni43NSA1Ni45OSBMIDM2Ny4xMiA1Ny45MyBMIDM2Ny41NiA1OC44MyBMIDM2OC4wNiA1OS42OCBMIDM2OC42MSA2MC40OCBMIDM2OS4yMCA2MS4yMiBMIDM2OS44NSA2MS45MSBMIDM3MC41MyA2Mi41NCBMIDM3MS4yNSA2My4xMSBMIDM3MS45OSA2My42MSBMIDM3Mi43NiA2NC4wNSBMIDM3My41NSA2NC40MiBMIDM3NC4zNSA2NC43MyBMIDM3NS4xNSA2NC45OCBMIDM3NS45NiA2NS4xNSBMIDM3Ni43NyA2NS4yNyBMIDM3Ny41NyA2NS4zMiBMIDM3OC4zNiA2NS4zMiBMIDM3OS4xMyA2NS4yNSBMIDM3OS44OCA2NS4xMyBMIDM4MC42MCA2NC45NSBMIDM4MS4zMCA2NC43MiBMIDM4MS45NiA2NC40NSBMIDM4Mi41OSA2NC4xMyBMIDM4My4xOCA2My43NyBMIDM4My43MiA2My4zOCBMIDM4NC4yMyA2Mi45NSBMIDM4NC42OSA2Mi40OSBMIDM4NS4xMCA2Mi4wMSBMIDM4NS40NyA2MS41MSBMIDM4NS43OSA2MC45OSBMIDM4Ni4wNiA2MC40NiBMIDM4Ni4yOSA1OS45MyBMIDM4Ni40NiA1OS4zOSBMIDM4Ni41OSA1OC44NSBMIDM4Ni42NyA1OC4zMSBMIDM4Ni43MSA1Ny43OSBMIDM4Ni43MCA1Ny4yOCBMIDM4Ni42NSA1Ni43OCBMIDM4Ni41NyA1Ni4zMCBMIDM4Ni40NCA1NS44NCBMIDM4Ni4yOSA1NS40MSBMIDM4Ni4xMCA1NS4wMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDlhMTU1IiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KICA8cGF0aCBkPSJNIDQ0OS40MDAwMDAwMDAwMDAwMyAxMDUgTCA0NDkuNDAwMDAwMDAwMDAwMDMgNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRlZWRkIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KPHBhdGggZD0iTSA0NDkuNDAwMDAwMDAwMDAwMDMgNDEuOCBDIDQ0OS40MDAwMDAwMDAwMDAwMyA1LCA0OTMuOTAwMDAwMDAwMDAwMDMgNSwgNTI2LjkwMDAwMDAwMDAwMDEgMjQuMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjRlZWRkIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD4KICA8cGF0aCBkPSJNIDUzNy40MDAwMDAwMDAwMDAxIDEwNSBMIDUzNy40MDAwMDAwMDAwMDAxIDUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CjxwYXRoIGQ9Ik0gNTM3LjQwMDAwMDAwMDAwMDEgNDEuOCBDIDUzNy40MDAwMDAwMDAwMDAxIDUsIDU4MS45MDAwMDAwMDAwMDAxIDUsIDYxNC45MDAwMDAwMDAwMDAxIDI0LjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZWVkZCIgc3Ryb2tlLXdpZHRoPSIxMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+Cjwvc3ZnPg==" alt="Arborr"></div>
+      <div class="col">
+        <div class="h">Product</div>
+        <a href="index.html#capabilities">Platform</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#customize">Customization</a>
+        <a href="index.html#pricing">Pricing</a>
+      </div>
+      <div class="col">
+        <div class="h">Trust</div>
+        <a href="index.html#trust">Security</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms & conditions</a>
+      </div>
+      <div class="col">
+        <div class="h">Company</div>
+        <a href="#">About</a>
+        <a href="mailto:hello@arborr.ai">Contact</a>
+      </div>
+      <div class="col">
+        <div class="h">Get started</div>
+        <a href="index.html#cta">Request access</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>© MMXXVI Arborr. All rights reserved.</div>
+      <div>v2.0 · private beta · cohort 01</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
